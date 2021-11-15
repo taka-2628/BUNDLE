@@ -1,0 +1,108 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "Test User 1",
+      "name": "Test User1",
+      "email": "test@user.com"
+    },
+    {
+      "id": 2,
+      "username": "User2",
+      "name": "Test User2",
+      "email": "test2@user.com"
+    },
+    {
+      "username": "User X",
+      "name": "",
+      "email": "userx@test.com",
+      "id": 3
+    }
+  ],
+  "userdata": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "stockPositions": [
+        {
+          "ticker": "AMZN",
+          "numOfShare": 10,
+          "costbasis": 2000
+        },
+        {
+          "ticker": "MSFT",
+          "numOfShare": 50,
+          "costbasis": 200
+        },
+        {
+          "ticker": "BLDR",
+          "numOfShare": 30,
+          "costbasis": 38.5
+        },
+        {
+          "ticker": "KKR",
+          "numOfShare": 500,
+          "costbasis": 47.85
+        }
+      ],
+      "cryptoPositions": [
+        {
+          "symbol": "ETH",
+          "numOfToken": 10,
+          "costbasis": 1000
+        },
+        {
+          "symbol": "DOT",
+          "numOfToken": 500,
+          "costbasis": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "stockPositions": [
+        {
+          "ticker": "AMZN",
+          "numOfShare": 10,
+          "costbasis": 2000
+        },
+        {
+          "ticker": "MSFT",
+          "numOfShare": 50,
+          "costbasis": 200
+        }
+      ],
+      "cryptoPositions": [
+        {
+          "symbol": "BTC",
+          "numOfToken": 5,
+          "costbasis": 20000
+        },
+        {
+          "symbol": "ETH",
+          "numOfToken": 10,
+          "costbasis": 1000
+        }
+      ]
+    },
+    {
+      "user_id": 3,
+      "stockPositions": [
+        {
+          "ticker": "AMZN",
+          "numOfShare": 10,
+          "costbasis": 2975.75
+        }
+      ],
+      "cryptoPositions": [
+        {
+          "symbol": "BTC",
+          "numOfToken": 20,
+          "costbasis": 30000
+        }
+      ],
+      "id": 3
+    }
+  ]
+}

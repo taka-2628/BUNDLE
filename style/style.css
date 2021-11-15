@@ -1,0 +1,537 @@
+body {
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* HEADER STYLE */
+header {
+    padding-top: 10px;
+    background-size: cover;
+    background-color: #000000;
+    text-align: center;
+}
+header h1 {
+    margin: 0px auto;
+    padding-bottom: 20px;
+    font-weight: normal;
+    font-size: 60px;
+    color: #ffffff;
+}
+header button {
+    display: none;
+    margin: -10px 15px 25px 15px;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+header button:hover {
+    background-color: #eaeaea;
+    text-decoration: underline;
+}
+
+
+/* LOGIN FORM STYLE */
+#login {
+    display: block;
+    width: 300px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #eaeaea;
+    border: solid black;
+    border-width: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+#login p {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-color: #000000;
+    color: transparent;
+}
+#login-form h3{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 26px;
+}
+#login-form input {
+    display: block;
+    margin: 12px auto 12px auto;
+    padding: 8px;
+    border: solid #727272;
+    border-width: 2px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #727272;
+}
+#login-form input[type="text"]:focus {
+    border-color: #000000;
+}
+#login-form input[type="submit"] {
+    display: block;
+    margin: 12px auto;
+    padding: 9px 20px;
+    border: none;
+    background-color: #727272;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#login-form input[type="submit"]:hover {
+    background-color: #bebebe;
+}
+#login-form input[type="submit"]:focus {
+    background-color: #000000;
+}
+#login-form div {
+    margin: 18px auto;
+}
+#signup-btn {
+    margin-bottom: 18px;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+#signup-btn:hover{
+    text-decoration: underline;
+}
+
+
+/* SIGNUP FORM STYLE */
+#signup {
+    display: none;
+    width: 300px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #eaeaea;
+    border: solid black;
+    border-width: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+#signup-form h3{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 26px;
+}
+#signup-form input {
+    display: block;
+    margin: 12px auto 12px auto;
+    padding: 8px;
+    border: solid #727272;
+    border-width: 2px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #727272;
+}
+#signup-form input[type="email"]:focus {
+    border-color: #000000;
+}
+#signup-form input[type="text"]:focus {
+    border-color: #000000;
+}
+#signup-form input[type="submit"] {
+    display: block;
+    margin: 12px auto;
+    padding: 9px 20px;
+    border: none;
+    background-color: #727272;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#signup-form input[type="submit"]:hover {
+    background-color: #bebebe;
+}
+#signup-form input[type="submit"]:focus {
+    background-color: #000000;
+}
+#signup-form div {
+    margin: 18px auto;
+}
+#signup-form p {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-color: #000000;
+    color: transparent;
+}
+#login-btn {
+    margin-bottom: 18px;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+#login-btn:hover{
+    text-decoration: underline;
+}
+
+
+/* STOCK & CRYPTO FORM STYLE */
+#add-stock-crypto form {
+    display: none;
+    text-align: center;
+    height: 180px;
+    background-color: #eaeaea;
+}
+#add-stock-crypto form h4{
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+#add-stock-crypto input {
+    margin: 12px 5px 5px 5px;
+    padding: 8px;
+    border: solid #727272;
+    border-width: 2px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #727272;
+}
+#add-stock-crypto input:focus {
+    border-color: #000000;
+}
+#add-stock-crypto input[type="date"] {
+    padding: 7px 8.5px;
+    text-align: center;
+}
+#add-stock-crypto input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.6);
+}
+#add-stock-crypto input[type="submit"] {
+    display: block;
+    margin: 12px auto;
+    padding: 9px 20px;
+    border: none;
+    background-color: #727272;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+#add-stock-crypto input[type="submit"]:hover {
+    background-color: #bebebe;
+} 
+#add-stock-crypto input[type="submit"]:focus {
+    background-color: #000000;
+}
+
+
+/* CONTAINER STYLE */
+#container {
+    display: none;
+    text-align: center;
+    height: 220px;
+    width: 1000px;
+    margin: 30px auto;
+    background-color: #eaeaea;
+    border: solid black;
+    border-width: 5px;
+    border-radius: 20px;
+}
+.subcontainer {
+    display: block;
+}
+.subcontainer div {
+    display: inline-block;
+    width: 400px;
+}
+.left {
+    text-align: right;
+    margin-right: 5px;
+}
+.left h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: normal;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #000000;
+    color: transparent;
+}
+.left h3 {
+    margin: 5px auto;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.25mm;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    color: transparent;
+}
+.right {
+    text-align: left;
+    margin-left: 5px;
+}
+.right h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 0.125mm;
+}
+.right h3 {
+    margin: 5px auto;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 0.125mm;
+}
+
+
+/* MAIN STYLE */
+main {
+    display: none;
+    width: 1000px;
+    margin: 20px auto;
+}
+h2 {
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 36px;
+}
+
+/* STOCK CONTAINER */
+#stock-dashboard div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#stock-dashboard h3 { 
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: normal;
+}
+#stock-dashboard h4 { 
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+#stock-dashboard h3.left {
+    margin-right: 0px;
+    color: #727272;
+}
+#stock-dashboard h4.left {
+    margin-right: 0px;
+    color: #727272;
+}
+
+/* CRYPTO CONTAINER */
+#crypto-dashboard div {
+    display: inline-block;
+    margin-right: 20px;
+}
+#crypto-dashboard h3 { 
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: normal;
+}
+#crypto-dashboard h4 { 
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+#crypto-dashboard h3.left {
+    margin-right: 0px;
+    color: #727272;
+}
+#crypto-dashboard h4.left {
+    margin-right: 0px;
+    color: #727272;
+}
+
+/* TABLE STYLE */ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
+    height: 24px;
+    text-align: left;
+    font-weight: normal;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+th {
+    font-weight: normal;
+    font-size: 16px;
+}
+td {
+    font-size: 12px;
+}
+.edit-btn-stock-container, .edit-btn-crypto-container {
+    text-align: center;
+}
+.edit-btn-stock, .edit-btn-crypto {
+    display: block;
+    margin: auto;
+}
+
+/* EDIT FORMS */
+#stock-edit-form, #crypto-edit-form {
+    display: none;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #eaeaea;
+    border: solid #000000;
+    border-width: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+#stock-edit-form h4 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 20px;
+}
+#crypto-edit-form h4 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-size: 20px;
+}
+#stock-edit-form button {
+    display: inline-block;
+    margin: 12px 10px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #727272;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}
+#stock-edit-form button:hover {
+    background-color: #bebebe;
+}
+#crypto-edit-form button {
+    display: inline-block;
+    margin: 12px 10px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #727272;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}
+#delete-position-cont-stock, #delete-position-cont-crypto {
+    display: none;
+}
+#delete-position-cont-stock p {
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+#delete-position-cont-crypto p {
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+#delete-position-cont-stock button {
+    background-color: #000000;
+}
+#delete-position-cont-crypto button {
+    background-color: #000000;
+}
+#edit-position-cont-stock, #edit-position-cont-crypto {
+    display: none;
+}
+#edit-position-cont-stock p {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+#edit-position-cont-cryoto p {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+#how-many-share-to-edit, #how-many-token-to-edit {
+    display: block;
+    margin: 10px auto 5px auto;
+    padding: 5px;
+    border: solid #727272;
+    border-width: 2px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #727272;
+}
+#cost-share-add, #cost-token-add {
+    display: none;
+    margin: 10px auto 5px auto;
+    padding: 5px;
+    border: solid #727272;
+    border-width: 2px;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #727272;
+}
+#edit-stock-form input[type="radio"]:checked {
+    border-color: #000000;
+}
+#edit-crypto-form input[type="radio"]:checked {
+    border-color: #000000;
+}
+#edit-stock-form input[type="submit"] {
+    display: block;
+    margin: 15px auto 5px auto;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}
+#edit-crypto-form input[type="submit"] {
+    display: block;
+    margin: 15px auto 5px auto;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}
+#stock-edit-form #cancel-edit-btn {
+    display: block;
+    margin: 15px auto 5px auto;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}
+#crypto-edit-form #cancel-edit-btn-crypto {
+    display: block;
+    margin: 15px auto 5px auto;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+}

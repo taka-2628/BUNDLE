@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="utf-8">
+    <title>BUNDLE</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script defer type="text/javascript" src="src/index.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <h1>BUNDLE</h1>
+        <button id="add-stock-btn">ADD STOCK</button>
+        <button id="add-crypto-btn">ADD CRYPTO</button>
+    </header>
+
+    <div id="login">
+        <form id="login-form">
+            <h3>login</h3>
+            <input type="text" id="username" placeholder="username" required>
+            <input type="submit" value="login">
+        </form>
+        <button id="signup-btn">signup</button>
+    </div>
+
+    <div id="signup">
+        <form id="signup-form">
+            <h3>signup</h3>
+            <input type="email" id="email" placeholder="email" required>
+            <input type="text" id="username" placeholder="username" required>
+            <input type="text" id="name" placeholder="fullname">
+            <input type="submit" value="signup">
+        </form>
+        <button id="login-btn">login</button>
+    </div>
+
+    <div id="add-stock-crypto">
+        <form id="stock-form">
+            <h4>ADD <strong>STOCK</strong> TO YOUR PORTFOLIO</h4>
+            <input type="text" id="ticker" placeholder="TICKER" required>
+            <input type="number" id="num-share" placeholder="# OF SHARE" required>
+            <input type="text" id="cost-share" placeholder="COST PER SHARE" data-type="currency" required>
+            <input type="text" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+            <input type="submit" value="SUBMIT">
+        </form>
+        <form id="crypto-form">
+            <h4>ADD <strong>CRYPTO</strong> TO YOUR PORTFOLIO</h4>
+            <input type="text" id="symbol" placeholder="SYMBOL" required>
+            <input type="number" id="num-token" placeholder="# OF TOKEN" required>
+            <input type="text" id="cost-token" placeholder="COST PER TOKEN" data-type="currency" required>
+            <input type="text" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+            <input type="submit" value="SUBMIT">
+        </form>
+    </div>
+    
+
+    <div id="container">
+        <div class="subcontainer">
+            <div class="left">
+                <h1>PORTFOLIO VALUE:</h1>
+            </div>
+            <div class="right">
+                <h1 id="portfolio">$ 0,000,000.00</h1>
+            </div>
+        </div>
+        
+        <div class="subcontainer">
+            <div class="left">
+                <h3>COST BASIS:</h3>
+            </div>
+            <div class="right">
+                <h3 id="cost-basis">$ 0,000,000.00</h3>
+            </div>
+        </div>
+        
+        <div class="subcontainer">
+            <div class="left">
+                <h3>PROFIT / LOSS:</h3>
+            </div>
+            <div class="right">
+                <h3 id="profit-loss">$ 0,000,000.00</h3>
+            </div>
+        </div>
+    </div>
+    
+    
+    <main>
+        <div id="stock-edit-form">
+            <h4>edit your <strong id="stock-to-edit"></strong> position</h4>
+            <button id="close-btn-stock">close position</button>
+            <button id="edit-btn-stock">edit position</button>
+
+            <div id="delete-position-cont-stock" >
+                <p>delete position?</p>
+                <button id="yes-stock">yes</button>
+                <button id="cancel-stock">cancel</button>
+            </div>
+
+            <div id="edit-position-cont-stock">
+                <form id="edit-stock-form">
+                    <p id="how-many-share-you-own"></p>
+                    <input type="radio" name="add-or-sell" id="sell-stock-selection" value="decrease" checked> decrease the position by </br>
+                    <input type="radio" name="add-or-sell" id="add-stock-selection" value="increase"> increase the position by </br>
+                    <input type="number" id="how-many-share-to-edit" placeholder="# of share" required>
+                    <input type="text" id="cost-share-add" placeholder="cost per share" data-type="currency">
+                    <input type="submit" value="submit">
+                </form>
+                <button id="cancel-edit-btn">cancel</button>
+            </div>
+        </div>
+
+        <section id=stock-container>
+            <h2>STOCK POSITIONS</h2>
+            <div id="stock-dashboard">
+                <div>
+                    <h3 class="left">STOCK PORTFOLIO VALUE:</h3>
+                    <h3 class="right" id="stock-portfolio">$ 0,000,000.00</h3>
+                </div>
+                <div>
+                    <h4 class="left">COST BASIS:</h4>
+                    <h4 class="right" id="stock-cost-basis">$ 0,000,000.00</h4>
+                </div>
+                <div>
+                    <h4 class="left">PROFIT / LOSS:</h4>
+                    <h4 class="right" id="stock-profit-loss">$ 0,000,000.00</h4>
+                </div>
+            </div>
+            <table id="stock-positions">
+                <tr>
+                    <th>TICKER</th>
+                    <th>QUANTITY</th>
+                    <th>COST</th>
+                    <th>COST TOTAL</th>
+                    <th>CURRENT PRICE</th>
+                    <th>MARKET VALUE</th>
+                    <th>UNREALIZED P/L</th>
+                    <th></th>
+                </tr>
+            </table>
+        </section>
+
+        <div id="crypto-edit-form">
+            <h4>edit your <strong id="crypto-to-edit"></strong> position</h4>
+            <button id="close-btn-crypto">close position</button>
+            <button id="edit-btn-crypto">edit position</button>
+
+            <div id="delete-position-cont-crypto" >
+                <p>delete position?</p>
+                <button id="yes-crypto">yes</button>
+                <button id="cancel-crypto">cancel</button>
+            </div>
+
+            <div id="edit-position-cont-crypto">
+                <form id="edit-crypto-form">
+                    <p id="how-many-token-you-own"></p>
+                    <input type="radio" name="add-or-sell-crypto" id="sell-crypto-selection" value="decrease" checked> decrease the position by </br>
+                    <input type="radio" name="add-or-sell-crypto" id="add-crypto-selection" value="increase"> increase the position by </br>
+                    <input type="number" id="how-many-token-to-edit" placeholder="# of token" required>
+                    <input type="text" id="cost-token-add" placeholder="cost per token" data-type="currency">
+                    <input type="submit" value="submit">
+                </form>
+                <button id="cancel-edit-btn-crypto">cancel</button>
+            </div>
+        </div>
+
+        <section id=crypto-container>
+            <h2>CRYPTO POSITIONS</h2>
+            <div id="crypto-dashboard">
+                <div>
+                    <h3 class="left">STOCK PORTFOLIO VALUE:</h3>
+                    <h3 class="right" id="crypto-portfolio">$ 0,000,000.00</h3>
+                </div>
+                <div>
+                    <h4 class="left">COST BASIS:</h4>
+                    <h4 class="right" id="crypto-cost-basis">$ 0,000,000.00</h4>
+                </div>
+                <div>
+                    <h4 class="left">PROFIT / LOSS:</h4>
+                    <h4 class="right" id="crypto-profit-loss">$ 0,000,000.00</h4>
+                </div>
+            </div>
+            <table id="crypto-positions">
+                <tr>
+                    <th>SYMBOL</th>
+                    <th>QUANTITY</th>
+                    <th>COST</th>
+                    <th>COST TOTAL</th>
+                    <th>CURRENT PRICE</th>
+                    <th>MARKET VALUE</th>
+                    <th>UNREALIZED P/L</th>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</html>
