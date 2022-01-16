@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 body {
     margin: 0 auto;
-    font-family: 'Oswald', 'Roboto', 'Open Sans', 'Quicksand', -apple-system, sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
-
 
 /* HEADER STYLE */
 header {
