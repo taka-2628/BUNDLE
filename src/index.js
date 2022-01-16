@@ -54,7 +54,7 @@ function signupFetch(){
     })
 }
 function testUsername(input){
-    fetch("http://localhost:3000/user")
+    fetch("https://bundle-heroku-backend-server.herokuapp.com/user")
     .then(res => res.json())
     .then(data => matchUser2(data, input))
 }
@@ -87,7 +87,7 @@ function postFetchUser(input){
         name: input.name.value,
         email: input.email.value
     };
-    fetch("http://localhost:3000/user", {
+    fetch("https://bundle-heroku-backend-server.herokuapp.com/user", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function postFetchUserData(userId){
         stockPositions: [],
         cryptoPositions: []
     };
-    fetch("http://localhost:3000/userdata", {
+    fetch("https://bundle-heroku-backend-server.herokuapp.com/userdata", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -127,7 +127,7 @@ function loginFetch(){
     })
 }
 function queryUsername(input){
-    fetch("http://localhost:3000/user")
+    fetch("https://bundle-heroku-backend-server.herokuapp.com/user")
     .then(res => res.json())
     .then(data => matchUser(data, input))
 }
@@ -163,7 +163,7 @@ function hideAlert(){
     if (alert != null){alert.remove()};
 }
 function fetchExistingPosition(match){
-    fetch(`http://localhost:3000/userdata/${match.id}`)
+    fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${match.id}`)
     .then(res => res.json())
     .then(userdata => renderExistingPosition(userdata))
 }
@@ -174,7 +174,9 @@ async function renderExistingPosition(userdata){
     
     for (stock of stockPositions){
         let priceDataStock = await fetch(`https://finnhub.io/api/v1/quote?symbol=${stock.ticker}&token=${apiKeySandboxFinnhub.key}`).then(res => res.json())
-        
+        //maybe try .then() instead of await here
+        //look into async function 
+
         renderStock(stock);
         updateStockMarketData(priceDataStock, stock);
     }
@@ -218,7 +220,7 @@ function postFetchAddStock(stock){
     }
     currentUserData.stockPositions.push(newStock)
     
-    fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+    fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -268,7 +270,7 @@ function postFetchAddCryoto(crypto){
     }
     currentUserData.cryptoPositions.push(newCrypto)
     
-    fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+    fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -318,6 +320,11 @@ function editStockPosition(){
     let editBtns = document.getElementsByClassName("edit-btn-stock")
     for (btn of editBtns) {
         btn.addEventListener("click", (e) => {
+
+            // bad practice to loop through HTML element collection and add event listener
+            // 1) event delegation: add to the parent elment and then use conditional logic to tell which one 
+            // 2) when you render each stock, add event listener there in stead of looping through HTML collection 
+
             const stock = e.target.parentNode.parentNode;
 
             const positionToEdit = document.getElementById("stock-to-edit");
@@ -349,7 +356,7 @@ function handleCloseStock(){
 
         currentUserData.stockPositions = updatedStockPositions;
         
-        fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+        fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -414,7 +421,7 @@ function handleEditStock(){
 
         console.log(stockToEdit);
         
-        fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+        fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -472,7 +479,7 @@ function handleCloseCrypto(){
         currentUserData.cryptoPositions = updatedCryptoPositions;
         console.log(currentUserData)
         
-        fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+        fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -537,7 +544,7 @@ function handleEditCrypto(crypto){
 
         console.log(cryptoToEdit);
         
-        fetch(`http://localhost:3000/userdata/${currentUser.id}`, {
+        fetch(`https://bundle-heroku-backend-server.herokuapp.com/userdata/${currentUser.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

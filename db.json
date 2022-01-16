@@ -17,6 +17,12 @@
       "name": "",
       "email": "userx@test.com",
       "id": 3
+    },
+    {
+      "username": "Test User 5",
+      "name": "",
+      "email": "userTest@text.com",
+      "id": 4
     }
   ],
   "userdata": [
@@ -103,6 +109,18 @@
         }
       ],
       "id": 3
+    },
+    {
+      "user_id": 4,
+      "stockPositions": [],
+      "cryptoPositions": [
+        {
+          "symbol": "BTC",
+          "numOfToken": 5,
+          "costbasis": 30000
+        }
+      ],
+      "id": 4
     }
   ]
 }
